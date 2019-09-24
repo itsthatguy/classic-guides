@@ -22,8 +22,8 @@ import { BaseParser, Parser } from './base';
 // }
 
 export class WowClassicLiveParser extends BaseParser implements Parser {
-  parse(filepath) {
-    const data = super.parse(filepath);
+  parse(file?) {
+    const data = super.parse(file);
     return this.getTasks(data);
   }
 

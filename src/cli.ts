@@ -9,7 +9,7 @@ program
   .command('convert <file> [to]')
   .description('converts a classic guide to specified format')
   .action((file, to) => {
-    new WowClassicLiveParser().parse(file);
+    new WowClassicLiveParser(file).parse();
   });
 
 program.parse(process.argv);

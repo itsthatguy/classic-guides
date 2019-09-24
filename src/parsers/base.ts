@@ -1,11 +1,16 @@
 import { resolve } from 'path';
 
 export interface Parser {
-  parse(filepath: string): {};
+  file: string;
+  parse(file?: string): {};
 }
 
 export class BaseParser implements Parser {
-  constructor() {}
+  file = null;
+
+  constructor(file) {
+    this.file = file;
+  }
 
   private load(filepath) {
     try {
@@ -17,7 +22,7 @@ export class BaseParser implements Parser {
     }
   }
 
-  parse(file) {
+  parse(file = this.file) {
     const filepath = resolve(__dirname, '..', '..', 'data', file);
     const data = this.load(filepath);
     return data;
