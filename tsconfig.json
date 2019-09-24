@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "allowJs": true,
+    "noUnusedLocals": true,
+    "lib": ["es2015", "esnext"],
+    "noImplicitAny": false,
+    "allowSyntheticDefaultImports": true,
+    "pretty": true,
+    "removeComments": false,
+    "skipLibCheck": true,
+    "outDir": ".build"
+  },
+  "include": [
+    "src/**/typings.d.ts",
+    "src/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}
